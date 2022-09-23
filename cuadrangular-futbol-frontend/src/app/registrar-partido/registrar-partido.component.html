@@ -1,0 +1,23 @@
+<h2 class="text-center">Registrar Partido</h2>
+<h2 class="text-center"></h2>
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="primer_Equipo_id">Nombre del Primer Equipo</label>
+            <select [(ngModel)] = "partido.primer_Equipo_id" name="primer_Equipo_id" class="form-control" id="primer_Equipo_id">
+                <option *ngFor="let equipo of equipos" value={{equipo}}>{{equipo.nombre}}</option>
+            </select>
+            <br>
+            <label for="primer_Equipo_Goles">Goles del primer equipo</label>
+            <input  [(ngModel)] = "partido.primer_Equipo_Goles" type="number" class="form-control" name="primer_Equipo_Goles" id="primer_Equipo_Goles">
+            <label for="segundo_Equipo_id">Nombre del Segundo Equipo</label>
+            <select [(ngModel)] = "partido.segundo_Equipo_id" name="segundo_Equipo_id" class="form-control" id="segundo_Equipo_id">
+                <option *ngFor="let equipo of equipos" value={{equipo}}>{{equipo.nombre}}</option>
+            </select>
+            <br>
+            <label for="segundo_Equipo_Goles">Goles del Segundo equipo</label>
+            <input  [(ngModel)] = "partido.segundo_Equipo_Goles" type="number" class="form-control" name="segundo_Equipo_Goles" id="segundo_Equipo_Goles">
+        </div>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>

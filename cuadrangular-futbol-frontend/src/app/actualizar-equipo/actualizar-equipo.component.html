@@ -1,0 +1,10 @@
+<h2 class="text-center">Actualizar Equipo</h2>
+<div *ngIf="equipo" class="container">
+    <form (ngSubmit)="actualizarEquipo()">
+        <div class="mb-3">
+            <label for="nombre">Nombre</label>
+            <input  [(ngModel)] = "equipo.nombre" type="text" class="form-control" name="nombre" id="nombre" value="{{equipo.nombre}}">
+        </div>
+        <button class="btn btn-warning">Editar</button>
+    </form>
+</div>

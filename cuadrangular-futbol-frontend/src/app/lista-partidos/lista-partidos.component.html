@@ -1,0 +1,26 @@
+<h2 class="text">Lista de Partidos</h2>
+<div class="container">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Equipo 1</th>
+                <th>Goles</th>
+                <th>Equipo 2</th>
+                <th>Goles</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let partido of partidos">
+                <td>{{partido.primer_Equipo_id.nombre}}</td>
+                <td>{{partido.primer_Equipo_Goles}}</td>
+                <td>{{partido.segundo_Equipo_id.nombre}}</td>
+                <td>{{partido.segundo_Equipo_Goles}}</td>
+                <td>
+                    <button id="{{partido.id}}" class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<h2 class="text-center">Registrar Equipo</h2>
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="nombre">Nombre</label>
+            <input  [(ngModel)] = "equipo.nombre" type="text" class="form-control" name="nombre" id="nombre">
+        </div>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>

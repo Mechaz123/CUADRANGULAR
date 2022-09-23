@@ -1,0 +1,20 @@
+<h2 class="text">Lista de equipos</h2>
+<div class="container">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let equipo of equipos">
+                <td>{{equipo.nombre}}</td>
+                <td>
+                    <button id="{{equipo.id}}" (click)="actualizarEquipo(equipo.id)" class="btn btn-warning">Editar</button>
+                    <button (click)="eliminarEquipo(equipo.id)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
